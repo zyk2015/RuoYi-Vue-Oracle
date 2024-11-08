@@ -6,16 +6,16 @@ spring:
         druid:
             # 主库数据源
             master:
-                url: jdbc:oracle:thin:@127.0.0.1:1521/orcl
-                username: root
-                password: password
+                url: jdbc:oracle:thin:@110.40.139.20:1521/orcl
+                username: ruoyi
+                password: 12345678
             # 从库数据源
             slave:
                 # 从数据源开关/默认关闭
-                enabled: false
-                url: 
-                username: 
-                password: 
+                enabled: true
+                url: jdbc:oracle:thin:@110.40.139.20:1521/orcl
+                username: scfgw
+                password: 12345678
             # 初始连接数
             initialSize: 5
             # 最小连接池数量

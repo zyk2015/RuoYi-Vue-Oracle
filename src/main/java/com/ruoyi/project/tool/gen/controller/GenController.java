@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
+
+import com.ruoyi.framework.aspectj.lang.annotation.DataSource;
+import com.ruoyi.framework.aspectj.lang.enums.DataSourceType;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -42,6 +45,7 @@ import com.ruoyi.project.tool.gen.service.IGenTableService;
  */
 @RestController
 @RequestMapping("/tool/gen")
+@DataSource(value = DataSourceType.SLAVE)
 public class GenController extends BaseController
 {
     @Autowired
